@@ -1,6 +1,6 @@
 # tictactoe-e2e-cypress — Vanilla JS Tic-Tac-Toe (Cypress E2E · Travis CI)
 
-[![Build Status](https://app.travis-ci.com/tsdavies/tictactoe-e2e-cypress.svg?branch=main)](https://app.travis-ci.com/github/tsdavies/tictactoe-e2e-cypress)
+[![Build Status](https://app.travis-ci.com/tsdavies/tictactoe-e2e-cypress.svg)](https://app.travis-ci.com/github/tsdavies/tictactoe-e2e-cypress)
 
 A small, **framework-free** web app that showcases front-end fundamentals with a reproducible **Cypress** end-to-end test suite running in **Travis CI**. Built as a compact, reviewer-friendly portfolio piece.
 
