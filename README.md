@@ -2,11 +2,13 @@
 
 [![Build Status](https://app.travis-ci.com/tsdavies/tictactoe-e2e-cypress.svg)](https://app.travis-ci.com/github/tsdavies/tictactoe-e2e-cypress)
 
-A small, **framework-free** web app that showcases front-end fundamentals with a reproducible **Cypress** end-to-end test suite running in **Travis CI**. Built as a compact, reviewer-friendly portfolio piece.
+A small, **framework-free** web app that demonstrates front-end fundamentals with a reproducible **Cypress** end-to-end test suite running in **Travis CI**. Built as a compact, reviewer-friendly portfolio piece.
 
 **Live site:** https://tsdavies.github.io/tictactoe-e2e-cypress/
 
-![Cypress](https://user-images.githubusercontent.com/31829478/104397633-206c3980-5545-11eb-95b6-38abce4f4202.gif "")
+**Cypress run:**  
+
+  ![Cypress demo](https://user-images.githubusercontent.com/31829478/104397633-206c3980-5545-11eb-95b6-38abce4f4202.gif "")
 
 ---
 
@@ -14,17 +16,17 @@ A small, **framework-free** web app that showcases front-end fundamentals with a
 
 - **Vanilla JS, HTML, CSS:** No scaffolds or frameworks—just the core web platform.
 - **Real tests:** Cypress specs exercise real user journeys (win, draw, reset).
-- **CI automation:** Tests run headless in **Travis CI**, surfacing a clean pass/fail signal on each commit.
-- **Portable:** Static files; easy to host (GitHub Pages) and easy to run locally.
+- **CI automation:** Tests run headless in **Travis CI**, surfacing a clear pass/fail signal on each commit.
+- **Portable:** Static files; easy to host (GitHub Pages) and to run locally.
 
 ---
 
 ## Quick tour — what to review
 
 - **`index.html`** — semantic markup and simple layout.
-- **`css/…`** — small, focused stylesheets.
-- **`scripts/app.js`** — vanilla JS for board state & interactions.
-- **`cypress/…`** — end-to-end specs asserting visible outcomes.
+- **`index.css`** — small, focused styles.
+- **`index.js`** — vanilla JS for board state & interactions.
+- **`cypress/` + `cypress.json`** — end-to-end specs asserting visible outcomes (classic Cypress layout).
 - **`.travis.yml`** — minimal CI config that runs Cypress against a target URL.
 
 ---
@@ -34,21 +36,15 @@ A small, **framework-free** web app that showcases front-end fundamentals with a
 ```
 .
 ├─ index.html
-├─ css/
-│  ├─ style.css
-│  ├─ nav.css
-│  ├─ article.css
-│  ├─ media-queries.css
-│  └─ fonts-and-text.css
-├─ scripts/
-│  └─ app.js
-├─ images/
-├─ cypress/
-│  ├─ e2e/            # test specs
-│  ├─ fixtures/
-│  └─ support/
-├─ cypress.config.*   # may vary by Cypress version
-└─ .travis.yml
+├─ index.css
+├─ index.js
+├─ cypress/            # Cypress tests (specs + support)
+├─ cypress.json        # Cypress (v9-style) config
+├─ .travis.yml         # Travis CI pipeline for headless E2E
+├─ package.json
+├─ package-lock.json
+├─ LICENSE
+└─ README.md
 ```
 
 ---
@@ -68,7 +64,7 @@ Alternative local servers:
 npx serve .
 ```
 
-Then visit `http://localhost:8000`.
+Then visit \`http://localhost:8000\`.
 
 ---
 
@@ -112,5 +108,5 @@ Travis installs dependencies and runs the Cypress suite headless. The badge at t
 
 ## Licence & attribution
 
-- Vanilla JS source © TS Davies 2025. Educational/Training use.
+- Vanilla JS source © 2025. Educational/portfolio use.
 - Typeface: Google Fonts **Questrial**.
